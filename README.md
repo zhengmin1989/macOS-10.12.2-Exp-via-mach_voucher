@@ -1,7 +1,9 @@
 #Local Privilege Escalation for macOS 10.12 via mach_voucher and XNU port Feng Shui
 
  * Write up:  
-         1. Chinese Version: coming soon.   
+         
+         1. Chinese Version: coming soon.  
+         
          2. English Version: https://jaq.alibaba.com/community/art/show?articleid=532
  
  * by Min(Spark) Zheng (twitter@SparkZheng, weibo@蒸米spark)
