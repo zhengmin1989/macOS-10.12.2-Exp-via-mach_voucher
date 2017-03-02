@@ -14,6 +14,7 @@
 
  * Special thanks to qwertyoruiop, ian beer, aimin pan, jingle, etc.
  
- * Reference: 1. Yalu 102: https://github.com/kpwn/yalu102
-              2. https://bugs.chromium.org/p/project-zero/issues/detail?id=1004
+ * Reference: 
+         1. Yalu 102: https://github.com/kpwn/yalu102
+         2. https://bugs.chromium.org/p/project-zero/issues/detail?id=1004
  
