@@ -1,4 +1,4 @@
-#Local Privilege Escalation for macOS 10.12 via mach_voucher and XNU port Feng Shui
+#Local Privilege Escalation for macOS 10.12.2 via mach_voucher and XNU port Feng Shui
 
  * Write up:  
          
