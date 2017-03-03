@@ -3,8 +3,8 @@
  * Write up:  
          
       1. Chinese Version: coming soon.  
-         
-      2. English Version: https://jaq.alibaba.com/community/art/show?articleid=532
+      
+      2. English Version: https://jaq.alibaba.com/community/art/show?articleid=532
  
  * by Min(Spark) Zheng (twitter@SparkZheng, weibo@蒸米spark)
 
